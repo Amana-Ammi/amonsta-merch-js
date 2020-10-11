@@ -1,0 +1,15 @@
+*{
+    margin: auto;
+    padding: auto;
+    font-family: Bookman L, serif;
+}
+
+
+/* basic centering */
+
+.photo-box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+  }
