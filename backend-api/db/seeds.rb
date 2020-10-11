@@ -75,6 +75,5 @@ Product.create([
     {name: "White Zombie Mug", image_url: "https://amonsta-online-merch.s3-us-west-2.amazonaws.com/mugs/white_mug.png",
         quantity: 5 , price: 25.00},
     {name: "Zombie Flesh Mug", image_url: "https://amonsta-online-merch.s3-us-west-2.amazonaws.com/mugs/zom_mug.png",
-        quantity: 5 , price: 25.00},
-        
+        quantity: 5 , price: 25.00}  
     ])
