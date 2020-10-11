@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
     def create
         product = Product.create(product_params)
-        render json: produt
+        render json: product
     end
 
     def update
