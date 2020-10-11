@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#### should I separate each category with a new create action? Or create product categories?
+
 
 Product.create([
     {name: "Black Amonsta Crewneck", image_url: "https://amonsta-online-merch.s3-us-west-2.amazonaws.com/crewnecks/am_blk_cr.png",
