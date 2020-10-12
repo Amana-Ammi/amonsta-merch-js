@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
     def index
+        
         products = Product.all
         render json: products
     end
@@ -24,10 +25,10 @@ class ProductsController < ApplicationController
         product.destroy
     end
 
-    private 
-    
+    private
+
     def product_params
-        params.require(:product).permit(:name, :image, :quantity, :price)
+        params.require(:product).permit(:name, :image_url, :price, :category)
     end
 
 end
