@@ -10,4 +10,6 @@ class ProductsAdapter {
         // .then(data => console.log(data));
     }
 
+    
+
 }
