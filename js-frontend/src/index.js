@@ -1,2 +1,2 @@
-const app = new App
-app.getProducts()
+const app = new App()
+// app.getProducts()
