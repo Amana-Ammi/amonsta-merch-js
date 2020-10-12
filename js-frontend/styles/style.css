@@ -1,16 +1,23 @@
 *{
-    margin: auto;
+    /* margin: auto; */
     padding: auto;
     font-family: Bookman L, serif;
 }
 
-
 .title {
-
+    margin-top: 1%;
+    margin-left: 30%;
 }
 
 h2 {
+    margin-top: 0%;
+    margin-left: 57%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
 
+.topnav {
+    background-color: rgb(78, 78, 78);
 }
   
 /* basic centering */
