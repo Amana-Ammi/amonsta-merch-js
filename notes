@@ -1,0 +1,13 @@
+products: []
+    url = ""
+
+
+    getProducts() {
+        //make a fetch request to products
+        //populate products properties w/ returned data
+        //call renderProducts
+    }
+
+    renderProducts() {
+        //create DOM nodes and insert data into them to render in the DOM
+    }
