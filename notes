@@ -1,6 +1,6 @@
-products: []
-    url = ""
-
+Need o create a category model.
+has many products
+products belong_category
 
     getProducts() {
         //make a fetch request to products
@@ -11,3 +11,16 @@ products: []
     renderProducts() {
         //create DOM nodes and insert data into them to render in the DOM
     }
+
+  
+
+class CreateShoppingCarts < ActiveRecord::Migration[6.0]
+  def change
+    create_table :shopping_carts do |t|
+      t.integer :product_count
+      t.float :total_price
+
+      t.timestamps
+    end
+  end
+end
