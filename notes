@@ -24,3 +24,23 @@ class CreateShoppingCarts < ActiveRecord::Migration[6.0]
     end
   end
 end
+
+app.js
+class App {
+    products = []
+    baseUrl = "http://localhost:3000"
+
+
+    getProducts() {
+        fetch(this.baseUrl + "/products")
+        .then(resp => resp.json())
+        .then(data => console.log(data));
+    }
+
+    renderProducts() {
+        const productArray = this.products.map(product => `<li>${product.name}</li>`)
+        console.log(productArray)
+    const photobox = document.getElementById('photo-box')
+    // photobox.innerHTML = '${}'
+    }
+}
