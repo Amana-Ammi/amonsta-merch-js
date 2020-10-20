@@ -7,44 +7,28 @@
     <script src="https://kit.fontawesome.com/4a62b8765b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- navbar -->
+
    <nav class="navbar">
-       <div class="navbar-center">
-           <!-- <span class="nav-icon">
-               <i class="fas fa-bars"></i>
-           </span> -->
+       <div class="navbar-center"> 
            <img src="./styles/images/am_shadow.png" alt="logo"/>
-           <!-- <h2> ONLINE </h2> -->
-           <div class="cart-btn">
-               <span class="nav-icon">
-                   <i class="fas fa-cart-arrow-down"></i>
-               </span>
-               <div class="cart-items">0</div>
-           </div>
+           <h2> MERCH </h2>
        </div>
    </nav>
-   <!--- end of navbar -->
-   
-   <div class="drop-down">
-        <select name="" id="merch-types" >
-        <option value="">TOPS</option>
-        <option value="">MASKS</option>
-        <option value="">HOME DECOR</option>
-        <option value="">OTHER</option>
+
+    <select class="categories" name="categories" id="categories">
+        <option value="all"> ALL </option>
+        <option value="tops"> TOPS </option>
+        <option value="masks"> MASKS </option>
+        <option value="homedecor"> HOME DECOR </option>
+        <option value="other"> OTHER </option>
     </select>
-   </div>
 
-   <div id="photo-box" class="photo-box">
+        <div id="img-container"></div>
 
-        <ul>
-            <li> SHIRTS </li>
-            <img id="shirts" class="merch" src="" alt="" width="400" height="400"><br><br>
         
-        </ul>
-   </div>
-   <script src="src/components/products.js"></script>
-   <script src="src/components/app.js"></script>
-   <script src="src/adapters/ProductsAdapter.js"></script>
+    </div>
+
    <script src="src/index.js"></script>
+   <script src="src/product.js"></script>
 </body>
 </html>
