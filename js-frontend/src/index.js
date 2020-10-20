@@ -14,7 +14,8 @@ selectElement.addEventListener('change', (event) => {
     // currently listening.need a function to filter results
 });
 
-document.addEventListener('submit', () =>{
+document.addEventListener('submit', () => {
+    console.log('update btn hit')
 // want to update products
 });
 
@@ -23,48 +24,35 @@ function getProducts() {
     .then(resp => resp.json())
     .then(products => {
         products.data.forEach(product => {
-            const productMarkup = `
-            <div class="child" data-id=${product.id}><br><br>
-                <img src=${product.attributes.image_url} alt="product"
-                class="prod-image"/>
-                <h3> ${product.attributes.name} </h3>
-                <h4> $${product.attributes.price} </h4>
-                    <div class="quantity">
-                        <i class="far fa-minus-square"></i>
-                        ${product.attributes.quantity}
-                        <i class="far fa-plus-square"></i><br><br>
-                    </div>
-                <button type="submit">UPDATE</button><br><br>
-            </div><br><br>
-            ` ;
-            document.querySelector('#img-container').innerHTML += productMarkup
+            let newProduct = new Product(product, product.attributes) 
+            document.querySelector('#img-container').innerHTML += newProduct.renderProducts()
         })
     })
-
-
-    function getProductsByCategory() {
-        fetch(baseUrl)
-        .then(resp => resp.json())
-        .then(categories => {
-            categories.data.forEach(categories => {
-                const productMarkup = `
-                <div class="child" data-id=${product.id}><br><br>
-                    <img src=${product.attributes.image_url} alt="product"
-                    class="prod-image"/>
-                    <h3> ${product.attributes.name} </h3>
-                    <h4> $${product.attributes.price} </h4>
-                        <div class="quantity">
-                            <i class="far fa-minus-square"></i>
-                            ${product.attributes.quantity}
-                            <i class="far fa-plus-square"></i><br><br>
-                        </div>
-                    <button type="submit">UPDATE</button><br><br>
-                </div><br><br>
-                ` ;
-                document.querySelector('#img-container').innerHTML += productMarkup
-            })
-        })
-    }
 }
+
+//     function getProductsByCategory() {
+//         fetch(baseUrl)
+//         .then(resp => resp.json())
+//         .then(categories => {
+//             categories.data.forEach(categories => {
+//                 const productMarkup = `
+//                 <div class="child" data-id=${product.id}><br><br>
+//                     <img src=${product.attributes.image_url} alt="product"
+//                     class="prod-image"/>
+//                     <h3> ${product.attributes.name} </h3>
+//                     <h4> $${product.attributes.price} </h4>
+//                         <div class="quantity">
+//                             <i class="far fa-minus-square"></i>
+//                             ${product.attributes.quantity}
+//                             <i class="far fa-plus-square"></i><br><br>
+//                         </div>
+//                     <button type="submit">UPDATE</button><br><br>
+//                 </div><br><br>
+//                 ` ;
+//                 document.querySelector('#img-container').innerHTML += productMarkup
+//             })
+//         })
+//     }
+// }
 
 
