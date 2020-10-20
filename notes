@@ -46,25 +46,6 @@ class App {
 }
 
 
-<div id="photo-box" class="photo-box">
-       <ul>
-            <li> SHIRTS </li>
-            <img id="shirts" class="merch" src="" alt="" width="400" height="400"><br><br>
-            <button class="shirts"> ADD TO CART </button><br><br>
-            <li> CREWNECKS </li>
-            <img id="crews" class="merch" src="" alt="" width="400" height="400"><br><br>
-            <button class="shirts"> ADD TO CART </button><br><br>
-            <li> MASKS </li>
-            <img id="masks" class="merch" src="" alt="" width="400" height="400"><br><br>
-            <button class="shirts"> ADD TO CART </button><br><br>
-            <li> HOME DECOR </li>
-            <img id="pillows" class="merch" src="" alt="" width="400" height="400"><br><br>
-            <button class="shirts"> ADD TO CART </button><br><br>
-            <li> MUGS </li>
-            <img id="MUGS" class="merch" src="" alt="" width="400" height="400"><br><br>
-            <button class="shirts"> ADD TO CART </button><br><br>
-        </ul>
-
          <!-- single product -->
              <article class="product">
                  <div class="img-container">
@@ -100,105 +81,31 @@ h2 {
     font-size: medium;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: rgb(231, 226, 221);
-    z-index: 1;
+
+function getProducts() {
+    fetch(baseUrl)
+    .then(resp => resp.json())
+    .then(products => {
+        products.data.forEach(product => {
+            const productMarkup = `
+            <article class="product">
+            <div data-id=${product.id}>
+                <img src=${product.attributes.image_url} alt="product"
+                class="product-img"/>
+                <button class="bag-btn" data-id=${product.id}>
+                    <i class="fa-cart-arrow-down"></i>
+                    add to bag
+                </button>
+            </div>
+            <h3> ${product.attributes.name} </h3>
+            <h4> $${product.attributes.price} </h4><br><br>
+        </article>
+            ` ;
+            document.querySelector('#img-container').innerHTML += productMarkup
+        })
+    })
 }
 
-.navbar-center {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-}
 
-.navbar img {
-    margin-left: 30%;
-}
-
-.nav-icon {
-    font-size: 1.5rem;
-}
-
-.cart-btn {
-    position: relative;
-    cursor: pointer;
-}
-
-.cart-items {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: rgb(157, 241, 78) ;
-    padding: 0 5px;
-    border-color: black;
-    border-radius: 60%;
-    color: black;
-}
-
-.products {
-    padding: 4rem 0;
-}
-
-/* .section-title h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 5rem;
-    text-transform: capitalize;
-    letter-spacing: normal;
-} */
-
-.products-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minimax(260px, 1fr));
-    column-gap: 1.5rem;
-    row-gap: 2rem ;
-}
-
-.img-container {
-    position: relative;
-}
-
-.cart-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    transition: none;
-    background: rgb(240,157,81,0.5);
-    z-index: 2;
-    /* visibility: hidden;  */
-}
-
-.cart {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    background: white;
-    z-index: 3;
-    background: rgb(231, 226, 221);
-    padding: 1.5rem;
-    transition: ;
-    transform: translateX(0);
-}
-
-.transparentBcg {
-    visibility: visible;
-}
+ <h3> ${product.attributes.name} </h3>
+                <h4> $${product.attributes.price} </h4><br><br>
