@@ -109,3 +109,79 @@ function getProducts() {
 
  <h3> ${product.attributes.name} </h3>
                 <h4> $${product.attributes.price} </h4><br><br>
+
+
+                  renderProducts() {
+      return `
+      <div class="prod-box" data-id=${this.id}>
+         <br><br><img src=${this.image_url} alt="product"/>
+         <h3 id="title"> ${this.name} </h3>
+         <h4> $${this.price} </h4><br><br>
+         <div>
+            <i class="far fa-minus-square"></i>
+            <p class="item-amount">${this.quantity}</p>
+            <i class="far fa-plus-square"></i><br><br>
+         </div>
+      <button id="update-btn" type="submit">UPDATE</button><br><br>
+   </div><br><br>
+      `
+   }
+
+eventlisteners
+
+document.addEventListener('change', () => {
+    console.log('selected')
+// want to update products
+});
+
+updatebtn = document.getElementById("update-btn")
+updatebtn.addEventListener('click', handleEdits, (e))
+    console.log('gotcha')
+// want to update products
+;
+
+
+// document.getElementById("title").addEventListener('dblclick', () => {
+//     console.log('how about you?')
+// });
+
+function handleEdits(e) {
+    const btn = e.target
+    btn.contentEditable
+}
+
+
+get one category
+// const selectElement = document.querySelector('.categories');
+ // getOnlyTops() //testing may have to move
+// function getOnlyTops() {
+//     fetch(baseUrl + '/categories/1')
+//     .then(resp => resp.json())
+//     .then(categories => {
+//         console.log(categories)
+//     })
+// }
+
+            const btn = document.querySelector('#categories');
+const sb = document.querySelector('#categories')
+btn.onclick = (event) => {
+    event.preventDefault();
+    // show the selected index
+    alert(sb.selectedIndex);
+    // if selectedIndex === 0 show function for one category
+};
+
+
+  // const productMarkup = `
+            // <div class="child" data-id=${product.id}><br><br>
+            //     <img src=${product.attributes.image_url} alt="product"
+            //     class="prod-image"/>
+            //     <h3> ${product.attributes.name} </h3>
+            //     <h4> $${product.attributes.price} </h4>
+            //         <div class="quantity">
+            //             <i class="far fa-minus-square"></i>
+            //             ${product.attributes.quantity}
+            //             <i class="far fa-plus-square"></i><br><br>
+            //         </div>
+            //     <button type="submit">UPDATE</button><br><br>
+            // </div><br><br>
