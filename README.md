@@ -44,9 +44,9 @@ GETTING STARTED
 
 HOW-TO
 
-     <!-- After running the program, you'll be greeted by the Welcome page. You'll have two options at the top, "log in" or "sign up".
+    After running the program, you'll be greeted by the Welcome page. You'll have two options at the top, "log in" or "sign up".
 
-     After signing up, you'll be automatically logged in and can begin browsing the navigation bar on the top of the screen. -->
+     After signing up, you'll be automatically logged in and can begin browsing the navigation bar on the top of the screen.
 
 SUPPORT
 
