@@ -1,3 +1,7 @@
+* {
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -17,52 +21,38 @@
   padding: 0 1.5rem;
 }
 
-.card {
-  background: #FFFFFF;
-  max-width: 1000px;
-  margin: 100px auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  /* box-sizing: border-box; */
-  /* padding: 48px; */
-  text-align: center;
-}
-
-.products {
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
 .img-container {
   position: absolute;
   top: 0;
   left: 0;
+  width: fit-content;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.prod-image {
-  object-fit: contain;
-  height: 450px;
-  width: 450px;
+.prod-box {
+  object-fit: scale-down;
+  border: solid;
+  border-color: black;
+  width: fit-content;
+  margin-left: 20%;
+  margin-top: 0%;
 }
 
-.child {
+/* .child {
   border: solid;
   border-color: black;
   width: fit-content;
   margin-left: 35%;
-}
+} */
 
-.child h3 {
+.prod-box h3 {
   text-align: center;
 }
 
-.child h4 {
+.prod-box h4 {
   text-align: center;
 }
 
@@ -70,21 +60,54 @@
   text-align: center;
 }
 
-button {
+.update-btn {
   background: rgb(135, 243, 121);
   border-radius: 10px;
   border: 2px solid #0f0f0f;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  size: initial;
-  margin-left: 42%;
+  size: 13vh;
+  margin-left: 45%;
 }
 
-button:hover {
-  background-color: #4CAF50; /* Green */
+.update.btn:hover {
+  background-color: #6e756e;
   color: white;
   position: center;
 }
 
 i {
   background: chocolate;
+}
+
+/* #categories { */
+  /* background: rgb(135, 243, 121); */
+  /* border-radius: 10px; */
+  /* border: 2px solid #0f0f0f; */
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+  /* size: initial; */
+  /* margin-left: 35%; */
+/* } */
+
+.btn {
+  border-radius: 10px;
+  border: 2px solid #0f0f0f;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  size: initial;
+  margin-left: 45%;
+}
+
+form {
+  margin-top: 0%;
+  margin-left: 8%;
+  border: black;
+  transform: translate(-10%, -10%);
+  width: 300px;
+  border: 5px solid black;
+  text-align: center;
+  background-color: grey;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+form h4 {
+  text-align: center;
 }
