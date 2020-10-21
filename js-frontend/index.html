@@ -3,31 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Amonsta Online</title>
+    <title>Amonsta Merch</title>
     <script src="https://kit.fontawesome.com/4a62b8765b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <!---Navbar Start-->
    <nav class="navbar">
        <div class="navbar-center"> 
            <img src="./styles/images/am_shadow.png" alt="logo"/>
            <h2> MERCH </h2>
        </div>
-   </nav>
+   </nav><br><br>
+   <!--Navbar End-->
+<!--Form Start -->
 
-    <select class="categories" name="categories" id="categories">
-        <option value="all"> ALL </option>
-        <option value="tops"> TOPS </option>
-        <option value="masks"> MASKS </option>
-        <option value="homedecor"> HOME DECOR </option>
-        <option value="other"> OTHER </option>
-    </select>
-
+    <form id="add-product" style="form-style">
+        <h4>ADD A NEW PRODUCT</h4>
+        <label for="fname">Product Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fimage">Image URL:</label>
+        <input type="text" id="fimage" name="fimage"><br><br>
+        <label for="fprice">Price: $</label>
+        <input type="text" id="fprice" name="fprice"><br><br>
+        <label for="fquantity">Quantity:</label>
+        <input type="text" id="fquantity" name="fquantity"><br>
+        <p>Choose A Category</p>
+            <select name="fcategories" id="fcategories">
+                <option value="1"> TOPS </option>
+                <option value="2"> MASKS </option>
+                <option value="3"> HOME DECOR </option>
+                <option value="4"> OTHER </option>
+        </select>
+        <input type="submit" value="ADD"><br><br>
+    </form>
+    <!--Form End-->
         <div id="img-container"></div>
-
-        
     </div>
-
    <script src="src/index.js"></script>
    <script src="src/product.js"></script>
 </body>
