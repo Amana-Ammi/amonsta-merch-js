@@ -16,7 +16,7 @@ class Api::V1::ProductsController < ApplicationController
     def create
         product = Product.new(product_params)
         if product.save
-            render json: ProductSerializer.new(products).serialized_json
+            render json: ProductSerializer.new(product).serialized_json
         end
     end
 
@@ -24,9 +24,9 @@ class Api::V1::ProductsController < ApplicationController
     #     product = Product.find(params[:id])
     # end
 
-    def destroy
-        product.destroy
-    end
+    # def destroy
+    #     product.destroy
+    # end
 
     private
 
