@@ -17,7 +17,7 @@ WHAT AM I?
     
 GETTING STARTED
     
-    <!-- Clone this repository at https://github.com/Amonsta/amonsta-merch-js
+    Clone this repository at https://github.com/Amonsta/amonsta-merch-js
 
     To ensure you have all gems needed to use this program;  run 'bundle install' from your terminal.
     
@@ -39,7 +39,7 @@ GETTING STARTED
 
     For the best user experience, please maximize your browser window.
 
-    To exit the application completely, close the open browser window and don't forget to input "ctrl + c" into your rails terminal. -->
+    To exit the application completely, close the open browser window and don't forget to input "ctrl + c" into your rails terminal.
 
 
 HOW-TO
