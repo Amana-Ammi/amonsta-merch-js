@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     getAllProducts();
     
     const createProductsForm = document.querySelector('#add-product');
-
-    createProductsForm.addEventListener("submit", (e) => formHandler(e))
+    // debugger
+    createProductsForm.addEventListener("submit", (e) => formHandler(e));
     
 });
 
@@ -17,8 +17,9 @@ function getAllProducts() {
             let newProduct = new Product(product, product.attributes) 
             document.querySelector('#img-container').innerHTML += newProduct.renderProducts()
         })
+        getLikes()
     })
-}
+};
 
 function formHandler(e) {
     e.preventDefault()
@@ -47,6 +48,14 @@ function postProduct(name, image_url, price, quantity, category_id) {
     })
 }
 
-
-
-
+function getLikes() {
+    const likeBtns = document.querySelectorAll(".likeBtn");
+    likeBtns.forEach((likeBtn) => {
+        likeBtn.addEventListener('click', (event) => {
+            const count = event.target.parentElement.querySelector(".count")
+            let num = parseInt(count.innerHTML)
+            count.innerHTML = num + 1
+            console.log('clicked')
+        })
+    })
+}
